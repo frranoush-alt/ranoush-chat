@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+
+<title>RANOUSH CHAT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Kufi+Arabic:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:black;
+margin:0;
+color:gold;
+font-family:'Noto Kufi Arabic',sans-serif;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* خلفية ذهبية متحركة */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle,gold 1px,transparent 1px);
+background-size:40px 40px;
+opacity:0.15;
+animation:move 30s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+0%{background-position:0 0;}
+100%{background-position:1000px 1000px;}
+}
+
+/* عنوان الشات */
+
+h1{
+font-family:'Cinzel',serif;
+font-size:60px;
+letter-spacing:4px;
+margin-top:40px;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px gold;}
+to{ text-shadow:0 0 40px gold;}
+}
+
+/* الفراشة */
+
+.butterfly{
+font-size:50px;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+animation:fly 12s infinite linear;
+}
+
+@keyframes fly{
+0%{top:200px;}
+50%{top:150px;}
+100%{top:200px;}
+}
+
+/* النص الترحيبي */
+
+.welcome{
+font-size:26px;
+margin-top:80px;
+margin-bottom:40px;
+}
+
+/* الصناديق */
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.box{
+border:2px solid gold;
+padding:30px;
+border-radius:20px;
+background:rgba(0,0,0,0.8);
+width:320px;
+box-shadow:0 0 20px gold;
+}
+
+/* الحقول */
+
+input,select{
+width:90%;
+padding:12px;
+margin:10px;
+background:black;
+border:1px solid gold;
+color:gold;
+border-radius:10px;
+font-family:'Noto Kufi Arabic',sans-serif;
+}
+
+/* الأزرار */
+
+button{
+background:black;
+border:2px solid gold;
+color:gold;
+padding:12px 25px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+font-family:'Noto Kufi Arabic',sans-serif;
+transition:0.4s;
+}
+
+button:hover{
+background:gold;
+color:black;
+transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>RANOUSH CHAT</h1>
+
+<div class="butterfly">🦋</div>
+
+<div class="welcome">
+أهلاً وسهلاً بكم بموقعنا
+</div>
+
+<div class="container">
+
+<!-- تسجيل الدخول -->
+
+<div class="box">
+
+<h2>تسجيل الدخول</h2>
+
+<input type="text" placeholder="اسم المستخدم">
+
+<input type="password" placeholder="كلمة المرور">
+
+<button>دخول</button>
+
+</div>
+
+
+<!-- إنشاء حساب -->
+
+<div class="box">
+
+<h2>سجل الآن</h2>
+
+<input type="text" placeholder="اسم المستخدم">
+
+<input type="password" placeholder="كلمة المرور">
+
+<input type="number" min="1" max="99" placeholder="العمر">
+
+<select>
+
+<option>ذكر</option>
+
+<option>أنثى</option>
+
+<option>آخر</option>
+
+</select>
+
+<button>إنشاء حساب</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
